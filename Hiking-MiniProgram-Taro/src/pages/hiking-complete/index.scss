@@ -1,0 +1,109 @@
+.hiking-complete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.hiking-complete-modal {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 448px;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__close {
+    padding: 4px;
+    font-size: 20px;
+    color: #9ca3af;
+
+    &:active {
+      background-color: #f3f4f6;
+      border-radius: 50%;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__emoji {
+    font-size: 96px;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__message {
+    font-size: 14px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  &__stats {
+    background-color: #ecfdf5;
+    border-radius: 12px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  &__stat {
+    text-align: center;
+
+    &-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: #059669;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    &-label {
+      font-size: 12px;
+      color: #6b7280;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #14b8a6 100%);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+
+    &::after {
+      border: none;
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "hiking-miniprogram-taro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "徒步小程序 - Taro 微信小程序版",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "build:weapp": "taro build --type weapp",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "build:h5": "taro build --type h5",
+    "type-check": "tsc --noEmit"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@tarojs/components": "^4.1.9",
+    "@tarojs/helper": "^4.1.9",
+    "@tarojs/plugin-framework-react": "^4.1.9",
+    "@tarojs/plugin-platform-weapp": "^4.1.9",
+    "@tarojs/react": "^4.1.9",
+    "@tarojs/runtime": "^4.1.9",
+    "@tarojs/taro": "^4.1.9",
+    "dayjs": "^1.11.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@tarojs/cli": "^4.1.9",
+    "@tarojs/webpack5-runner": "^4.1.9",
+    "@types/react": "^18.3.1",
+    "@types/webpack-env": "^1.18.5",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-taro": "^4.1.9",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "sass": "^1.77.0",
+    "sharp": "^0.34.5",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0"
+  }
+}

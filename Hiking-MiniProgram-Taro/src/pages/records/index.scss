@@ -1,0 +1,240 @@
+.records-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  max-width: 448px; // max-w-md
+  margin: 0 auto;
+
+  // 头部渐变区域
+  .page-header {
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #14b8a6 100%);
+    color: #ffffff;
+    padding: 24px 20px 32px; // pt-6 px-5 pb-8
+
+    .page-title {
+      font-size: 24px; // text-2xl
+      font-weight: 700; // font-bold
+      margin-bottom: 24px; // mb-6
+      display: block;
+    }
+
+    // 本月数据卡片
+    .monthly-stats-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+      border-radius: 16px; // rounded-2xl
+      padding: 20px; // p-5
+
+      .monthly-label {
+        font-size: 14px; // text-sm
+        color: #d1fae5; // text-emerald-100
+        margin-bottom: 12px; // mb-3
+        display: block;
+      }
+
+      .monthly-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px; // gap-4
+      }
+
+      .stat-item {
+        text-align: center;
+
+        &-value {
+          font-size: 24px; // text-2xl
+          font-weight: 700; // font-bold
+          display: block;
+          margin-bottom: 4px; // mb-1
+
+          .unit {
+            font-size: 14px; // text-sm
+            font-weight: 400; // font-normal
+            margin-left: 2px; // ml-0.5
+          }
+        }
+
+        &-label {
+          font-size: 12px; // text-xs
+          color: #d1fae5; // text-emerald-100
+        }
+      }
+    }
+  }
+
+  .page-content {
+    padding: 24px 20px; // px-4 py-6
+  }
+
+  // 章节标题
+  .section {
+    margin-bottom: 24px; // mb-6
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 8px; // gap-2
+      margin-bottom: 16px; // mb-4
+
+      .section-icon {
+        width: 20px;
+        height: 20px;
+        color: #059669; // text-emerald-600
+      }
+
+      .section-title {
+        font-size: 18px; // text-lg
+        font-weight: 600; // font-semibold
+      }
+    }
+  }
+
+  // 累计成就 - 2列布局
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px; // gap-3
+    margin-bottom: 24px; // mb-6
+  }
+
+  .achievement-card {
+    background: linear-gradient(135deg, #ecfdf5 0%, #ccfbf1 100%); // emerald-50 to teal-50
+    border-radius: 16px; // rounded-2xl
+    padding: 16px; // p-4
+
+    &--blue {
+      background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%); // blue-50 to sky-50
+    }
+
+    &--purple {
+      background: linear-gradient(135deg, #faf5ff 0%, #fce7f3 100%); // purple-50 to pink-50
+    }
+
+    &--orange {
+      background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%); // orange-50 to amber-50
+    }
+
+    &__emoji {
+      font-size: 24px; // text-3xl
+      margin-bottom: 8px; // mb-2
+      display: block;
+    }
+
+    &__value {
+      font-size: 24px; // text-2xl
+      font-weight: 700; // font-bold
+      display: block;
+      margin-bottom: 4px; // mb-1
+
+      .unit {
+        font-size: 14px; // text-sm
+        font-weight: 400; // font-normal
+        margin-left: 4px; // ml-1
+      }
+    }
+
+    &--blue &__value {
+      color: #1d4ed8; // text-blue-700
+    }
+
+    &--purple &__value {
+      color: #9333ea; // text-purple-700
+    }
+
+    &--orange &__value {
+      color: #ea580c; // text-orange-700
+    }
+
+    &:not(.achievement-card--blue):not(.achievement-card--purple):not(.achievement-card--orange) &__value {
+      color: #047857; // text-emerald-700
+    }
+
+    &__label {
+      font-size: 14px; // text-sm
+      color: #6b7280; // text-gray-600
+    }
+  }
+
+  // 徒步记录列表
+  .record-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; // space-y-3
+  }
+
+  .record-card {
+    background: #ffffff;
+    border-radius: 16px; // rounded-2xl
+    padding: 16px; // p-4
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); // shadow-sm
+    border: 1px solid #f3f4f6; // border-gray-100
+
+    &__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px; // mb-4
+    }
+
+    &__title {
+      font-size: 16px; // text-base
+      font-weight: 600; // font-semibold
+      color: #111827; // text-gray-900
+      margin-bottom: 4px; // mb-1
+    }
+
+    &__date {
+      font-size: 14px; // text-sm
+      color: #6b7280; // text-gray-600
+      display: flex;
+      align-items: center;
+    }
+
+    &__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px; // gap-3
+    }
+
+    &__stat {
+      text-align: center;
+      padding: 12px 0; // py-3
+      border-radius: 12px; // rounded-xl
+
+      &--emerald {
+        background: linear-gradient(135deg, #ecfdf5 0%, #ccfbf1 100%);
+      }
+
+      &--blue {
+        background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
+      }
+
+      &--orange {
+        background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+      }
+
+      &-value {
+        font-size: 18px; // text-lg
+        font-weight: 700; // font-bold
+        display: block;
+        margin-bottom: 4px; // mb-1
+      }
+
+      &--emerald &-value {
+        color: #047857; // text-emerald-700
+      }
+
+      &--blue &-value {
+        color: #1d4ed8; // text-blue-700
+      }
+
+      &--orange &-value {
+        color: #ea580c; // text-orange-700
+      }
+
+      &-label {
+        font-size: 12px; // text-xs
+        color: #6b7280; // text-gray-600
+      }
+    }
+  }
+}

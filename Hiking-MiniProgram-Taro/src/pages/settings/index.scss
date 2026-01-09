@@ -1,0 +1,133 @@
+.settings-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding-top: 44px; // 系统导航栏高度
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #f3f4f6;
+
+  &__back {
+    padding: 4px;
+    border-radius: 50%;
+
+    &:active {
+      background-color: #f3f4f6;
+    }
+  }
+
+  &__back-icon {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.settings-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-user-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+
+    &--last {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    color: #111827;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: #6b7280;
+  }
+
+  &__level {
+    font-size: 14px;
+    font-weight: 600;
+    color: #059669;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #ecfdf5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__avatar-icon {
+    font-size: 24px;
+  }
+}
+
+.settings-menu {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.settings-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: left;
+  border: none;
+
+  &::after {
+    border: none;
+  }
+
+  &:active {
+    background-color: #f9fafb;
+  }
+
+  &--last {
+    border-bottom: none;
+  }
+
+  &__label {
+    font-size: 16px;
+    color: #111827;
+  }
+
+  &__arrow {
+    font-size: 20px;
+    color: #d1d5db;
+  }
+}

@@ -1,0 +1,81 @@
+// ============================================
+// 设计令牌系统 - 与原型一一对应
+// ============================================
+
+// 主题色 - 绿色渐变系统
+$color-primary-start: #10b981;  // emerald-500
+$color-primary: #059669;        // emerald-600
+$color-primary-end: #14b8a6;    // teal-600
+
+// 语义色
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-error: #ef4444;
+$color-info: #3b82f6;
+
+// 难度标签色
+$color-difficulty-easy-bg: #ecfdf5;    // emerald-50
+$color-difficulty-easy-text: #047857;  // emerald-700
+$color-difficulty-medium-bg: #fff7ed;  // orange-50
+$color-difficulty-medium-text: #c2410c; // orange-700
+
+// 中性色
+$color-text-primary: #111827;   // gray-900
+$color-text-secondary: #6b7280; // gray-500
+$color-text-tertiary: #9ca3af;  // gray-400
+$color-border: #e5e7eb;         // gray-200
+$color-bg-gray: #f9fafb;        // gray-50
+$color-bg-white: #ffffff;
+
+// 渐变色
+$gradient-primary: linear-gradient(135deg, $color-primary-start 0%, $color-primary 50%, $color-primary-end 100%);
+
+// ============================================
+// 间距系统
+// ============================================
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 12px;
+$spacing-lg: 16px;
+$spacing-xl: 24px;
+$spacing-2xl: 32px;
+$spacing-3xl: 48px;
+
+// ============================================
+// 圆角系统
+// ============================================
+$radius-sm: 8px;   // rounded-xl (原型)
+$radius-md: 12px;  // rounded-2xl (原型)
+$radius-lg: 16px;
+$radius-full: 9999px;
+
+// ============================================
+// 字体系统
+// ============================================
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ============================================
+// 阴影系统
+// ============================================
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+// ============================================
+// 层级
+// ============================================
+$z-index-modal: 1000;
+$z-index-popup: 900;
+$z-index-toast: 800;
+$z-index-navbar: 700;
+$z-index-tabbar: 600;

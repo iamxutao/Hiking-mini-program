@@ -1,0 +1,75 @@
+.notification-settings-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding-top: 44px; // 系统导航栏高度
+}
+
+.notification-settings-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #f3f4f6;
+
+  &__back {
+    padding: 4px;
+    border-radius: 50%;
+
+    &:active {
+      background-color: #f3f4f6;
+    }
+  }
+
+  &__back-icon {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.notification-settings-content {
+  padding: 16px;
+}
+
+.notification-settings-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.notification-settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #f3f4f6;
+
+  &--last {
+    border-bottom: none;
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: #111827;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    color: #6b7280;
+  }
+
+  &__checkbox {
+    transform: scale(1.2);
+  }
+}

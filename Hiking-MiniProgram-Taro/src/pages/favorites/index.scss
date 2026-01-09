@@ -1,0 +1,151 @@
+.favorites-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding-top: 44px; // 系统导航栏高度
+}
+
+.favorites-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #f3f4f6;
+
+  &__back {
+    padding: 4px;
+    border-radius: 50%;
+
+    &:active {
+      background-color: #f3f4f6;
+    }
+  }
+
+  &__back-icon {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.favorites-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.favorites-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+
+  &:active {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image-wrapper {
+    position: relative;
+    height: 160px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__rating {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__rating-star {
+    color: #fbbf24;
+    font-size: 16px;
+  }
+
+  &__rating-value {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__content {
+    padding: 16px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__badge {
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+
+    &--easy {
+      background-color: #ecfdf5;
+    }
+
+    &--easy &-text {
+      color: #047857;
+    }
+
+    &--medium {
+      background-color: #fff7ed;
+    }
+
+    &--medium &-text {
+      color: #c2410c;
+    }
+  }
+
+  &__badge-text {
+    font-weight: 500;
+  }
+
+  &__distance,
+  &__duration {
+    font-size: 14px;
+    color: #6b7280;
+  }
+
+  &__separator {
+    color: #d1d5db;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #6b7280;
+  }
+
+  &__location-icon {
+    margin-right: 4px;
+  }
+}

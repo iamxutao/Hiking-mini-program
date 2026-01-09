@@ -30,8 +30,5 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Embedded git repositories
-Hiking-MiniProgram-Taro/
-
 # Invalid files
 nul

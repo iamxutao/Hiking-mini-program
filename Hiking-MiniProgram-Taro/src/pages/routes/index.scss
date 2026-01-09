@@ -1,0 +1,185 @@
+.routes-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  max-width: 448px; // max-w-md
+  margin: 0 auto;
+
+  .search-bar {
+    padding: 16px; // p-4
+    background: #ffffff;
+    border-bottom: 1px solid #f3f4f6; // border-gray-100
+
+    .search-input {
+      background: #f3f4f6; // bg-gray-100
+      border: none;
+      border-radius: 8px; // rounded-lg
+      padding: 12px 16px; // px-4 py-3
+      font-size: 14px; // text-sm
+      width: 100%;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        ring: 2px solid #10b981;
+      }
+    }
+  }
+
+  .difficulty-filter {
+    background: #ffffff;
+    padding: 12px 16px; // px-4 py-3
+    margin-bottom: 8px; // mb-2
+
+    .filter-scroll {
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none; // hide scrollbar
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .filter-list {
+      display: inline-flex;
+      gap: 8px; // gap-2
+
+      .filter-item {
+        padding: 8px 16px; // px-4 py-2
+        border-radius: 12px; // rounded-xl
+        background: #f3f4f6; // bg-gray-100
+        color: #6b7280; // text-gray-600
+        font-size: 14px; // text-sm
+        font-weight: 500; // font-medium
+        white-space: nowrap;
+        transition: all 0.2s;
+
+        &.active {
+          background: linear-gradient(135deg, #10b981 0%, #059669 50%, #14b8a6 100%);
+          color: #ffffff;
+          box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3); // shadow-lg shadow-emerald-500/30
+        }
+      }
+    }
+  }
+
+  .route-list {
+    padding: 16px; // px-4
+    padding-bottom: 16px; // pb-4
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px; // space-y-3
+  }
+
+  // 横向布局的路线卡片
+  .route-card {
+    background: #ffffff;
+    border-radius: 16px; // rounded-2xl
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); // shadow-sm
+    border: 1px solid #f3f4f6; // border-gray-100
+    overflow: hidden;
+
+    display: flex;
+    gap: 16px; // gap-4
+    padding: 16px; // p-4
+
+    &__image {
+      position: relative;
+      width: 96px; // w-24
+      height: 96px; // h-24
+      flex-shrink: 0;
+      border-radius: 12px; // rounded-xl
+      overflow: hidden;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__content {
+      flex: 1;
+      min-width: 0; // 防止内容溢出
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 16px; // text-base
+      font-weight: 600; // font-semibold
+      color: #111827; // text-gray-900
+      margin-bottom: 8px; // mb-2
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__tags {
+      display: flex;
+      align-items: center;
+      gap: 8px; // gap-2
+      margin-bottom: 8px; // mb-2
+
+      .tag {
+        padding: 4px 8px; // px-2 py-1
+        border-radius: 8px; // rounded-lg
+        font-size: 12px; // text-xs
+        font-weight: 500; // font-medium
+
+        &.difficulty-easy {
+          background: #ecfdf5; // emerald-50
+          color: #047857; // emerald-700
+        }
+
+        &.difficulty-medium {
+          background: #fff7ed; // orange-50
+          color: #c2410c; // orange-700
+        }
+      }
+
+      .text-secondary {
+        font-size: 14px; // text-sm
+        color: #6b7280; // text-gray-600
+      }
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .time {
+        display: flex;
+        align-items: center;
+        font-size: 12px; // text-xs
+        color: #6b7280; // text-gray-600
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .star {
+          width: 16px; // w-4
+          height: 16px; // h-4
+          fill: #fbbf24; // fill-amber-400
+          color: #fbbf24;
+        }
+
+        .value {
+          font-size: 14px; // text-sm
+          font-weight: 500; // font-medium
+        }
+      }
+    }
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 48px 20px;
+    color: #6b7280; // text-gray-500
+  }
+}
