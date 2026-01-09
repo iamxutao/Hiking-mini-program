@@ -1,0 +1,58 @@
+import { ChevronLeft } from 'lucide-react';
+
+export default function AchievementsPage({ onBack }: { onBack: () => void }) {
+  const achievements = [
+    { id: 1, emoji: '🌱', title: '徒步新秀', desc: '完成首次徒步', unlocked: true },
+    { id: 2, emoji: '💯', title: '百里徒步', desc: '累计徒步100公里', unlocked: true, progress: 156.8, total: 100 },
+    { id: 3, emoji: '🪜', title: '千层台阶', desc: '累计爬升1000米', unlocked: true, progress: 3840, total: 1000 },
+    { id: 4, emoji: '🗺️', title: '路线探索者', desc: '完成20条不同路线', unlocked: false, progress: 12, total: 20 },
+    { id: 5, emoji: '🌟', title: '连续打卡7天', desc: '连续7天完成徒步', unlocked: true },
+    { id: 6, emoji: '🏅', title: '完成10条路线', desc: '累计完成10条路线', unlocked: true },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="flex items-center gap-3 p-4 bg-white border-b border-gray-100">
+        <button onClick={onBack} className="p-1 hover:bg-gray-100 rounded-full">
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <h1 className="text-lg font-semibold">我的成就</h1>
+      </div>
+
+      {/* Content */}
+      <div className="p-4 grid grid-cols-2 gap-3">
+        {achievements.map((achievement) => (
+          <div
+            key={achievement.id}
+            className={`p-4 rounded-2xl ${
+              achievement.unlocked
+                ? 'bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200'
+                : 'bg-gray-100 border border-gray-200 opacity-60'
+            }`}
+          >
+            <div className="text-4xl mb-2">{achievement.emoji}</div>
+            <h3 className="font-semibold text-sm mb-1">{achievement.title}</h3>
+            <p className="text-xs text-gray-600 mb-2">{achievement.desc}</p>
+            {achievement.progress !== undefined && (
+              <div className="bg-white rounded-full h-2 overflow-hidden">
+                <div
+                  className="bg-gradient-to-r from-emerald-500 to-teal-500 h-full rounded-full"
+                  style={{ width: `${Math.min((achievement.progress / achievement.total) * 100, 100)}%` }}
+                />
+              </div>
+            )}
+            <div className="text-xs mt-1">
+              {achievement.progress !== undefined && (
+                <span className="text-gray-600">{achievement.progress}/{achievement.total}</span>
+              )}
+              {achievement.unlocked && (
+                <span className="text-emerald-600 font-medium">✓ 已解锁</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx @tarojs/cli init:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:weapp:*)",
+      "Bash(dir:*)",
+      "Bash(node:*)",
+      "Bash(npm run dev)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(ping:*)",
+      "Bash(git config:*)",
+      "Bash(findstr:*)",
+      "Bash(git push:*)",
+      "Bash(git remote remove:*)",
+      "Bash(git remote add:*)"
+    ]
+  }
+}
